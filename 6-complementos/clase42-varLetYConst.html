@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Clase 42 - var let y const: las diferencias</title>
+  </head>
+  <body>
+    <script>
+    var sacha = {
+      nombre: 'Sacha',
+      apellido: 'Lifszyc',
+      edad: 28
+    }
+
+      function esMayorDeEdad(persona) {
+        let mensaje
+        const MAYORIA_EDAD = 18
+
+        if (persona.edad >= MAYORIA_EDAD) {
+         mensaje = 'Es mayor de edad'
+        } else {
+         mensaje = 'No es mayor de edad'
+        }
+        console.log(mensaje);
+      }
+
+      // esMayorDeEdad(sacha)
+
+      for (var i  = 0; i < 10; i++) {
+        console.log(i);
+      }
+
+      console.log(`Termino el ciclo for, i vale ${i}`);
+
+      const numeros = [1, 2, 3, 4, 5, 6 , 7]
+      // numeros = [1 , 2] No se puede reasignar el array de una constante
+      numeros.push(8) // si se puede modificar el array
+      console.log(numeros);
+    </script>
+  </body>
+</html>

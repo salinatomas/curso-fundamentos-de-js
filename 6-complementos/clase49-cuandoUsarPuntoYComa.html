@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>¿Cando hace falta poner el punto y coma al final de la linea?</title>
+  </head>
+  <body>
+    <script>
+    // 1 CASO
+      console.log('Hola mi nombre es Sacha'); // <--
+      [1, 2, 3].forEach(n => console.log(n * 2))
+
+    // 2 CASO
+      const nombre = 'Sacha'
+      console.log('Hola mi nombre es Sacha');
+      `${nombre} es un desarrollador`
+
+
+    // 3 CASO: este es un caso para los enters
+    function calcularDoble(numero) {
+      // return
+      //   {
+      //     original: numero, doble: numero * 2
+      //   } // Nos da error al retornar esto
+
+      return {
+        original: numero, doble: numero * 2
+      }
+    }
+
+    </script>
+  </body>
+</html>

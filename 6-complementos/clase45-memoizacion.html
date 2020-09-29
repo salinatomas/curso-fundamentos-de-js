@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Clase 45 - Memoizacion: ahorrando computo</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Factorial:
+        !6 = 6 * 5 * 4 * 3 * 2 * 1 = 720
+        !12 = 12 * 11 * 10 * 9 * 8 * 7 * !6 =
+      */
+
+      // Las funciones pueden tener atributos internos
+      function factorial(n) { // Funcion recursiva
+        if (!this.cache) { // Si no existe una cache creamela (se va acrear la primera vez)
+          this.cache = {}
+        }
+
+        if (this.cache[n]) { // Si existe una cache no hagas ningun calculo y retornamela
+          return this.cache[n]
+        }
+
+        if (n === 1) { // Caso base
+          return 1
+        }
+
+        this.cache[n] = n * factorial(n - 1) // Caso recursivo, que se guarda en un atributo n, por ejemplo el atributo 6 = 720
+        return this.cache[n]
+
+        // 6 * factorial(5); 5 * factorial(4); 4 * factorial(3)... 2 * 1
+      }
+
+    </script>
+  </body>
+</html>

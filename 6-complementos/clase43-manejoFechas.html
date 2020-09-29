@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Clase 43 - ¿Hace cuantos dias naciste?</title>
+  </head>
+  <body>
+    <script>
+      function diasEntreFechas(fecha1, fecha2) { // Las fechas nos devuelven milisegundos
+        const unDia = 1000 * 60 * 60 * 24 // Cuantos milisegundos hay en un dia
+        const diferencia = Math.abs(fecha1 - fecha2)
+
+        return Math.floor(diferencia / unDia)
+      }
+
+      const hoy  = new Date() // Fecha actual
+      const nacimiento = new Date(2004, 7, 30)
+
+
+    </script>
+  </body>
+</html>

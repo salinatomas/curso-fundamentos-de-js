@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Clase 46 - Entendiendo los closures en JS</title>
+  </head>
+  <body>
+    <script>
+      function crearSaludo(finalDeFrase) {
+        return function(nombre) {
+          console.log(`Hola ${nombre}, ${finalDeFrase}`);
+        } // Esta funcion va a recordar la variable "finalDeFrase" que se envia al llamar a la funcion crearSaludo()
+      }
+
+      const saludoArgentino = crearSaludo('che')
+      const saludoMexicano = crearSaludo('guey')
+      const saludoColombiano = crearSaludo('amigo')
+
+      saludoArgentino('Sacha') // Hola Sacha, che
+      saludoMexicano('Sacha') // Hola Sacha, guey
+      saludoColombiano('Sacha') // Hola sacha, amigo
+    </script>
+  </body>
+</html>

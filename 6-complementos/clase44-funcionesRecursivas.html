@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Clase 44 - Funciones Recursivas</title>
+  </head>
+  <body>
+    <script>
+      /*
+        13 |_4__
+
+        13 - 4 = 9     1
+        9  - 4 = 5     1
+        5  - 4 = 1     1
+        1 - 4 = -3     0      (el dividendo es menor que el divisor) --> caso base
+      */
+
+      function divisionEntera(dividendo, divisor) {
+        if (dividendo < divisor) { // Si estamos en el caso base
+          return 0
+        }
+
+        return 1 + divisionEntera(dividendo - divisor, divisor) // Se llamara a la misma funcion hasta que lleguemos al caso base
+      }
+
+    </script>
+  </body>
+</html>
